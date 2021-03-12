@@ -22,5 +22,15 @@ namespace Crud
         {
 
         }
+
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
