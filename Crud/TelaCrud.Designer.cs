@@ -34,13 +34,13 @@ namespace Crud
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtUni = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtQtdProd = new System.Windows.Forms.TextBox();
             this.txtProduto = new System.Windows.Forms.TextBox();
@@ -63,6 +63,7 @@ namespace Crud
             this.tblRegistros.RowTemplate.Height = 25;
             this.tblRegistros.Size = new System.Drawing.Size(600, 202);
             this.tblRegistros.TabIndex = 0;
+            this.tblRegistros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblRegistros_CellContentClick);
             // 
             // btnProcurar
             // 
@@ -117,39 +118,6 @@ namespace Crud
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCadastrar.Location = new System.Drawing.Point(443, 77);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(92, 34);
-            this.btnCadastrar.TabIndex = 6;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.BackColor = System.Drawing.SystemColors.Window;
-            this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterar.Location = new System.Drawing.Point(208, 77);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(92, 34);
-            this.btnAlterar.TabIndex = 7;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
-            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnExcluir.Location = new System.Drawing.Point(326, 77);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(92, 34);
-            this.btnExcluir.TabIndex = 8;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -184,6 +152,40 @@ namespace Crud
             this.txtUni.Name = "txtUni";
             this.txtUni.Size = new System.Drawing.Size(100, 23);
             this.txtUni.TabIndex = 13;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastrar.Location = new System.Drawing.Point(443, 77);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(92, 34);
+            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAlterar.Location = new System.Drawing.Point(208, 77);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(92, 34);
+            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
+            this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnExcluir.Location = new System.Drawing.Point(326, 77);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(92, 34);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -278,6 +280,7 @@ namespace Crud
             this.Controls.Add(this.tblRegistros);
             this.Name = "TelaCrud";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TelaCrud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tblRegistros)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

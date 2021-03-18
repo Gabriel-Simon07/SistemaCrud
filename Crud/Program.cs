@@ -8,6 +8,7 @@ namespace Crud
 {
     static class Program
     {
+        public static List<Global> listaRegistros = new List<Global>();
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

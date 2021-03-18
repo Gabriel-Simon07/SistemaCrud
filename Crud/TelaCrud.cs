@@ -32,5 +32,22 @@ namespace Crud
         {
 
         }
+
+        private void TelaCrud_Load(object sender, EventArgs e)
+        {
+            tblRegistros.DataSource = Global.Consultar();
+        }
+
+        private void tblRegistros_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Global salvar = new Global(
+                txtCliente.Text,txtPedido.Text,int.Parse(txtQtdProd.Text),float.Parse(txtUni.Text),
+                float.Parse(txtTotal.Text));
+        }
     }
 }

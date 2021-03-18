@@ -42,14 +42,14 @@ namespace Crud
         }
         public Global(string cliente, int quantidade, float preçoUNI, float valorTotal, int pedido, string produto, int idMax, int id)
         {
-            _Cliente = "";
-            _Quantidade = 0;
-            _PrecoUNI = 0;
-            _totalValor = 0;
-            _pedido = 0;
-            _Produto = "";
-            _idMax = 0;
-            _id = 0;
+            _Cliente = cliente;
+            _Quantidade = quantidade;
+            _PrecoUNI = preçoUNI;
+            _totalValor = valorTotal;
+            _pedido = pedido;
+            _Produto = produto;
+            _idMax = idMax;
+            _id = id;
         }
         #endregion
 
@@ -95,6 +95,25 @@ namespace Crud
             get { return _idMax; }
         }
 
+        #endregion
+
+        #region Acessando Dados
+        public void inserir()
+        {
+
+        }
+        public static List<Global> Consultar()
+        {
+            return listaGlobal;
+        }
+        public void Excluir()
+        {
+
+        }
+        public void Alterar()
+        {
+
+        }
         #endregion
     }
 }
