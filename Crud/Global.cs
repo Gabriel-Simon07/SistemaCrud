@@ -29,25 +29,21 @@ namespace Crud
             _idMax = 0;
             _id = 0;
         }
-        public Global(string cliente,  float preçoUNI, float valorTotal, int pedido, string produto, int idMax, int id)
-        {
-            _Cliente = "";
-            _Quantidade = 0;
-            _PrecoUNI = 0;
-            _totalValor = 0;
-            _pedido = 0;
-            _Produto = "";
-            _idMax = 0;
-            
-        }
-        public Global(string cliente, int quantidade, float preçoUNI, float valorTotal, int pedido, string produto, int idMax, int id)
+        public Global(int quantidade,string cliente,  float preçoUNI, float valorTotal, int pedido)
         {
             _Cliente = cliente;
             _Quantidade = quantidade;
             _PrecoUNI = preçoUNI;
             _totalValor = valorTotal;
             _pedido = pedido;
-            _Produto = produto;
+        }
+        public Global(string cliente, int quantidade, float preçoUNI, float valorTotal, int pedido, int idMax, int id)
+        {
+            _Cliente = cliente;
+            _Quantidade = quantidade;
+            _PrecoUNI = preçoUNI;
+            _totalValor = valorTotal;
+            _pedido = pedido;
             _idMax = idMax;
             _id = id;
         }
@@ -58,7 +54,7 @@ namespace Crud
         {
             set { _id = value; }
             get { return _id; }
-        }
+        }        
         public string Cliente
         {
             set { _Cliente= value; }
@@ -83,24 +79,15 @@ namespace Crud
         {
             set { _pedido= value; }
             get { return _pedido; }
-        }
-        public string Produto
-        {
-            set { _Produto= value; }
-            get { return _Produto; }
-        }
-        public int IdMax
-        {
-            set { _idMax= value; }
-            get { return _idMax; }
-        }
-
+        }               
         #endregion
 
         #region Acessando Dados
         public void inserir()
         {
-
+            _idMax++;
+            _id = _idMax;
+            listaGlobal.Add(this);
         }
         public static List<Global> Consultar()
         {

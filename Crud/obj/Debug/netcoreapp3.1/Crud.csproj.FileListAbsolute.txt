@@ -1,0 +1,15 @@
+C:\Users\Gabriel\source\repos\Crud\Crud\bin\Debug\netcoreapp3.1\Crud.exe
+C:\Users\Gabriel\source\repos\Crud\Crud\bin\Debug\netcoreapp3.1\Crud.deps.json
+C:\Users\Gabriel\source\repos\Crud\Crud\bin\Debug\netcoreapp3.1\Crud.runtimeconfig.json
+C:\Users\Gabriel\source\repos\Crud\Crud\bin\Debug\netcoreapp3.1\Crud.runtimeconfig.dev.json
+C:\Users\Gabriel\source\repos\Crud\Crud\bin\Debug\netcoreapp3.1\Crud.dll
+C:\Users\Gabriel\source\repos\Crud\Crud\bin\Debug\netcoreapp3.1\Crud.pdb
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.csprojAssemblyReference.cache
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.TelaCrud.resources
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.csproj.GenerateResource.cache
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.dll
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.pdb
+C:\Users\Gabriel\source\repos\Crud\Crud\obj\Debug\netcoreapp3.1\Crud.genruntimeconfig.cache

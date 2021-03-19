@@ -45,9 +45,11 @@ namespace Crud
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Global salvar = new Global(
-                txtCliente.Text,txtPedido.Text,int.Parse(txtQtdProd.Text),float.Parse(txtUni.Text),
-                float.Parse(txtTotal.Text));
+            Global salvar = new Global(int.Parse(txtQtdProd.Text),txtCliente.Text,float.Parse(txtUni.Text)
+                ,float.Parse(txtTotal.Text=Convert.ToString(int.Parse(txtQtdProd.Text)*float.Parse(txtUni.Text))),int.Parse(txtPedido.Text));
+            salvar.inserir();
+            tblRegistros.DataSource = "";
+            tblRegistros.DataSource = Global.Consultar();
         }
     }
 }
