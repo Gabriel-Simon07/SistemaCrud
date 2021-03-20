@@ -47,6 +47,16 @@ namespace Crud
             _idMax = idMax;
             _id = id;
         }
+        public Global(int id)
+        {
+            Global aux = listaGlobal.Find(listaCliente => listaCliente.ID == id);
+            _Cliente = aux.Cliente;
+            _Quantidade = aux.Quantidade;
+            _PrecoUNI = aux.PreçoUnitario;
+            _totalValor = aux.PrecoTotal;
+            _pedido = aux.Pedido;
+            _id = aux.ID;
+        }
         #endregion
 
         #region Propriedades
@@ -93,13 +103,23 @@ namespace Crud
         {
             return listaGlobal;
         }
+        public static List<Global> Consultar(string cliente)
+        {
+            return listaGlobal.FindAll(lista => lista.Cliente.Contains(cliente));
+        }
         public void Excluir()
         {
 
         }
         public void Alterar()
         {
-
+            int i;
+            i = listaGlobal.FindIndex(listaAltera => listaAltera.ID == _id);
+            listaGlobal[i].Cliente = _Cliente;
+            listaGlobal[i].Pedido = _pedido;
+            listaGlobal[i].Quantidade = _Quantidade;
+            listaGlobal[i].PreçoUnitario = _PrecoUNI;
+            listaGlobal[i].PrecoTotal = _totalValor;
         }
         #endregion
     }

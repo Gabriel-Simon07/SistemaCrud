@@ -64,6 +64,7 @@ namespace Crud
             this.tblRegistros.Size = new System.Drawing.Size(600, 202);
             this.tblRegistros.TabIndex = 0;
             this.tblRegistros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblRegistros_CellContentClick);
+            this.tblRegistros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblRegistros_CellDoubleClick);
             // 
             // btnProcurar
             // 
@@ -75,6 +76,7 @@ namespace Crud
             this.btnProcurar.TabIndex = 1;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label1
             // 
