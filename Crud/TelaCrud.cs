@@ -49,20 +49,34 @@ namespace Crud
             txtQtdProd.Text = "";
             txtUni.Text = "";
             txtTotal.Text = "";
+            txtId.Text = "";
         }
         private void tblRegistros_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            txtCliente.Focus();
-            Global salvar = new Global(int.Parse(txtQtdProd.Text),txtCliente.Text,float.Parse(txtUni.Text)
-                ,float.Parse(txtTotal.Text=Convert.ToString(int.Parse(txtQtdProd.Text)*float.Parse(txtUni.Text))),int.Parse(txtPedido.Text));
-            salvar.inserir();
+            if (txtPedido.Text.Length == 0)
+            {
+
+
+                txtCliente.Focus();
+                Global salvar = new Global(int.Parse(txtQtdProd.Text), txtCliente.Text, float.Parse(txtUni.Text)
+                    , float.Parse(txtTotal.Text = Convert.ToString(int.Parse(txtQtdProd.Text) * float.Parse(txtUni.Text))), int.Parse(txtPedido.Text));
+                salvar.inserir();
+            }
+            else
+            {
+                txtCliente.Focus();
+                Global salvar = new Global(int.Parse(txtQtdProd.Text), txtCliente.Text, float.Parse(txtUni.Text)
+                  , float.Parse(txtTotal.Text = Convert.ToString(int.Parse(txtQtdProd.Text) * float.Parse(txtUni.Text))), int.Parse(txtPedido.Text));
+                    salvar.Alterar();
+            }
             tblRegistros.DataSource = "";
-            tblRegistros.DataSource = Global.Consultar();
+            preencheTbl(Global.Consultar());
+            // tblRegistros.DataSource = Global.Consultar();
             limpaTela();
         }
 
@@ -77,8 +91,10 @@ namespace Crud
             id = (int)tblRegistros["ID", e.ColumnIndex].Value;
             Global aux = new Global(id);
             txtPedido.Text = aux.ID.ToString();
+            txtQtdProd.Text = aux.Quantidade.ToString();
             txtCliente.Text = aux.Cliente;
-            txt
+            txtTotal.Text = aux.PrecoTotal.ToString();
+            txtUni.Text = aux.PreçoUnitario.ToString();
         }
     }
 }

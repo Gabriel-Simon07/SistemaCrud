@@ -50,6 +50,8 @@ namespace Crud
             this.label4 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tblRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +101,8 @@ namespace Crud
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Tan;
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTotal);
@@ -124,7 +128,7 @@ namespace Crud
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(497, 15);
+            this.label9.Location = new System.Drawing.Point(428, 15);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 17);
             this.label9.TabIndex = 18;
@@ -134,7 +138,7 @@ namespace Crud
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(629, 15);
+            this.label8.Location = new System.Drawing.Point(545, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 17);
             this.label8.TabIndex = 16;
@@ -142,7 +146,7 @@ namespace Crud
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(622, 35);
+            this.txtTotal.Location = new System.Drawing.Point(543, 35);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(100, 23);
             this.txtTotal.TabIndex = 14;
@@ -150,7 +154,7 @@ namespace Crud
             // 
             // txtUni
             // 
-            this.txtUni.Location = new System.Drawing.Point(501, 35);
+            this.txtUni.Location = new System.Drawing.Point(437, 35);
             this.txtUni.Name = "txtUni";
             this.txtUni.Size = new System.Drawing.Size(100, 23);
             this.txtUni.TabIndex = 13;
@@ -193,22 +197,22 @@ namespace Crud
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(373, 15);
+            this.label6.Location = new System.Drawing.Point(325, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 17);
+            this.label6.Size = new System.Drawing.Size(105, 17);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Qtd do Produto(s)";
+            this.label6.Text = "Qtd do Produto";
             // 
             // txtQtdProd
             // 
-            this.txtQtdProd.Location = new System.Drawing.Point(379, 35);
+            this.txtQtdProd.Location = new System.Drawing.Point(331, 35);
             this.txtQtdProd.Name = "txtQtdProd";
             this.txtQtdProd.Size = new System.Drawing.Size(100, 23);
             this.txtQtdProd.TabIndex = 11;
             // 
             // txtProduto
             // 
-            this.txtProduto.Location = new System.Drawing.Point(134, 35);
+            this.txtProduto.Location = new System.Drawing.Point(119, 35);
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(100, 23);
             this.txtProduto.TabIndex = 5;
@@ -217,7 +221,7 @@ namespace Crud
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(155, 15);
+            this.label3.Location = new System.Drawing.Point(140, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 6;
@@ -227,7 +231,7 @@ namespace Crud
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(265, 15);
+            this.label5.Location = new System.Drawing.Point(233, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 17);
             this.label5.TabIndex = 10;
@@ -235,7 +239,7 @@ namespace Crud
             // 
             // txtPedido
             // 
-            this.txtPedido.Location = new System.Drawing.Point(257, 35);
+            this.txtPedido.Location = new System.Drawing.Point(225, 35);
             this.txtPedido.Name = "txtPedido";
             this.txtPedido.Size = new System.Drawing.Size(100, 23);
             this.txtPedido.TabIndex = 9;
@@ -267,6 +271,23 @@ namespace Crud
             this.label2.Size = new System.Drawing.Size(137, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nome do cliente";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(649, 35);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(79, 23);
+            this.txtId.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(652, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "ID Cliente";
             // 
             // TelaCrud
             // 
@@ -314,6 +335,8 @@ namespace Crud
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
 
