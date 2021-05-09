@@ -5,122 +5,93 @@ using System.Text;
 
 namespace Crud
 {
-    public class Global
-    {
-        static List<Global> listaGlobal = new List<Global>();
-        protected string _Cliente;
-        protected int _Quantidade;
-        protected float _PrecoUNI;
-        protected float _totalValor;
-        protected int _pedido;
-        protected string _Produto;
-        static int _idMax;
-        protected int _id;
+	public class Global
+	{
+		static List<Global> listaGlobal = new List<Global>();
 
-        #region Construtores
-        public Global()
-        {
-            _Cliente = "";
-            _Quantidade = 0;
-            _PrecoUNI = 0;
-            _totalValor = 0;
-            _pedido = 0;
-            _Produto = "";
-            _idMax = 0;
-            _id = 0;
-        }
-        public Global(int quantidade,string cliente,  float preçoUNI, float valorTotal, int pedido)
-        {
-            _Cliente = cliente;
-            _Quantidade = quantidade;
-            _PrecoUNI = preçoUNI;
-            _totalValor = valorTotal;
-            _pedido = pedido;
-        }
-        public Global(string cliente, int quantidade, float preçoUNI, float valorTotal, int pedido, int idMax, int id)
-        {
-            _Cliente = cliente;
-            _Quantidade = quantidade;
-            _PrecoUNI = preçoUNI;
-            _totalValor = valorTotal;
-            _pedido = pedido;
-            _idMax = idMax;
-            _id = id;
-        }
-        public Global(int id)
-        {
-            Global aux = listaGlobal.Find(listaCliente => listaCliente.ID == id);
-            _Cliente = aux.Cliente;
-            _Quantidade = aux.Quantidade;
-            _PrecoUNI = aux.PreçoUnitario;
-            _totalValor = aux.PrecoTotal;
-            _pedido = aux.Pedido;
-            _id = aux.ID;
-        }
-        #endregion
+		protected string _Cliente;
+		protected string _Pedido;
+		protected int _Quantidade;
+		protected float _Preco;
+		protected float _Total;
+		protected int _Id;
+		protected int MaxId = 0;
 
-        #region Propriedades
-        public int ID
-        {
-            set { _id = value; }
-            get { return _id; }
-        }        
-        public string Cliente
-        {
-            set { _Cliente= value; }
-            get { return _Cliente; }
-        }
-        public int Quantidade
-        {
-            set { _Quantidade= value; }
-            get { return _Quantidade; }
-        }
-        public float PreçoUnitario
-        {
-            set { _PrecoUNI= value; }
-            get { return _PrecoUNI; }
-        }
-        public float PrecoTotal
-        {
-            set { _totalValor= value; }
-            get { return _totalValor; }
-        }
-        public int Pedido
-        {
-            set { _pedido= value; }
-            get { return _pedido; }
-        }               
-        #endregion
+		#region Construtores
+		public Global(string cliente, string pedido, int qtd, float preco, float total, int id)
+		{
+			_Cliente = cliente;
+			_Pedido = pedido;
+			_Quantidade = qtd;
+			_Preco = preco;
+			_Total = total;
+			_Id = id;
+		}
+		public Global(string cliente, string pedido, int qtd, float preco, float total)
+		{
+			_Cliente = cliente;
+			_Pedido = pedido;
+			_Quantidade = qtd;
+			_Preco = preco;
+			_Total = total;
+		}
 
-        #region Acessando Dados
-        public void inserir()
-        {
-            _idMax++;
-            _id = _idMax;
-            listaGlobal.Add(this);
-        }
-        public static List<Global> Consultar()
-        {
-            return listaGlobal;
-        }
-        public static List<Global> Consultar(string cliente)
-        {
-            return listaGlobal.FindAll(lista => lista.Cliente.Contains(cliente));
-        }
-        public void Excluir()
-        {
+		#endregion
 
-        }
-        public void Alterar()
-        {
-            int i;
-            i = listaGlobal.FindIndex(listaAltera => listaAltera.ID == _id);
-            listaGlobal[i].Cliente = _Cliente;
-            listaGlobal[i].Pedido = _pedido;
-            listaGlobal[i].Quantidade = _Quantidade;
-            listaGlobal[i].PreçoUnitario = _PrecoUNI;
-            listaGlobal[i].PrecoTotal = _totalValor;
-        }
-        #endregion
-    }
+		#region Propriedades
+		public int QUANTIDADE
+		{
+			set { _Quantidade = value; }
+			get { return _Quantidade; }
+		}
+
+		public int ID
+		{
+			set { _Id = value; }
+			get { return _Id; }
+		}
+		public string CLIENTE
+		{
+			set { _Cliente = value; }
+			get { return _Cliente; }
+		}
+		public string PEDIDO
+		{
+			set { _Pedido = value; }
+			get { return _Pedido; }
+		}
+		public float PRECO
+		{
+			set { _Preco = value; }
+			get { return _Preco; }
+		}
+
+		public float TOTAL
+		{
+			set { _Total = value; }
+			get { return _Total; }
+		}
+
+		#endregion
+
+		#region Metodos
+		public static List<Global> Consultar()
+		{
+			return listaGlobal;
+		}
+		public void Inserir()
+		{
+
+		}
+		public void Deletar()
+		{
+
+		}
+		public void Alterar()
+		{
+
+		}
+
+		#endregion
+	}
 }
