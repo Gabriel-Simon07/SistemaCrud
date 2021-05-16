@@ -18,7 +18,7 @@ namespace Crud
 		protected int MaxId = 0;
 
 		#region Construtores
-		public Global(string cliente, string pedido, int qtd, float preco, float total, int id)
+		public Global(int id, string cliente, string pedido, int qtd, float preco, float total)
 		{
 			_Cliente = cliente;
 			_Pedido = pedido;
@@ -26,6 +26,17 @@ namespace Crud
 			_Preco = preco;
 			_Total = total;
 			_Id = id;
+		}
+
+		public Global( int id)
+		{
+			Global informacoes = listaGlobal.Find(listaDoCliente => listaDoCliente.ID == id);
+			_Id = informacoes.ID;
+			_Cliente = informacoes.CLIENTE;
+			_Pedido = informacoes.PEDIDO;
+			_Quantidade = informacoes.QUANTIDADE;
+			_Preco = informacoes.PRECO;
+			_Total = informacoes.TOTAL;			
 		}
 		public Global(string cliente, string pedido, int qtd, float preco, float total)
 		{
@@ -79,9 +90,18 @@ namespace Crud
 		{
 			return listaGlobal;
 		}
+
+		public static List<Global> Consultar(string clientePesquisar)
+		{
+			return listaGlobal.FindAll(lista => lista.CLIENTE.Contains(clientePesquisar));
+			
+		}
+
 		public void Inserir()
 		{
-
+			MaxId++;
+			_Id = MaxId;
+			listaGlobal.Add(this);
 		}
 		public void Deletar()
 		{
@@ -89,7 +109,13 @@ namespace Crud
 		}
 		public void Alterar()
 		{
-
+			int i;
+			i = listaGlobal.FindIndex(listGlobal => listGlobal.ID == _Id);
+			listaGlobal[i].CLIENTE = _Cliente;
+			listaGlobal[i].PEDIDO= _Pedido;
+			listaGlobal[i].QUANTIDADE = _Quantidade;
+			listaGlobal[i].PRECO= _Preco;
+			listaGlobal[i].TOTAL = _Total;
 		}
 
 		#endregion

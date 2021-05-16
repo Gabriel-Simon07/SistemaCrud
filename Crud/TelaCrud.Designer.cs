@@ -34,12 +34,14 @@ namespace Crud
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtPesquisa = new System.Windows.Forms.TextBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.btnLimpar = new System.Windows.Forms.Button();
+			this.label5 = new System.Windows.Forms.Label();
+			this.txtId = new System.Windows.Forms.TextBox();
+			this.button1 = new System.Windows.Forms.Button();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.txtTotal = new System.Windows.Forms.TextBox();
 			this.txtUni = new System.Windows.Forms.TextBox();
-			this.btnCadastrar = new System.Windows.Forms.Button();
-			this.btnAlterar = new System.Windows.Forms.Button();
 			this.btnExcluir = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.txtQtd = new System.Windows.Forms.TextBox();
@@ -48,7 +50,6 @@ namespace Crud
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtCliente = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.tblRegistros)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -98,13 +99,14 @@ namespace Crud
 			// groupBox1
 			// 
 			this.groupBox1.BackColor = System.Drawing.Color.Tan;
+			this.groupBox1.Controls.Add(this.btnLimpar);
+			this.groupBox1.Controls.Add(this.label5);
+			this.groupBox1.Controls.Add(this.txtId);
 			this.groupBox1.Controls.Add(this.button1);
 			this.groupBox1.Controls.Add(this.label9);
 			this.groupBox1.Controls.Add(this.label8);
 			this.groupBox1.Controls.Add(this.txtTotal);
 			this.groupBox1.Controls.Add(this.txtUni);
-			this.groupBox1.Controls.Add(this.btnCadastrar);
-			this.groupBox1.Controls.Add(this.btnAlterar);
 			this.groupBox1.Controls.Add(this.btnExcluir);
 			this.groupBox1.Controls.Add(this.label6);
 			this.groupBox1.Controls.Add(this.txtQtd);
@@ -117,6 +119,49 @@ namespace Crud
 			this.groupBox1.Size = new System.Drawing.Size(734, 117);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
+			this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+			// 
+			// btnLimpar
+			// 
+			this.btnLimpar.BackColor = System.Drawing.SystemColors.Window;
+			this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.btnLimpar.Location = new System.Drawing.Point(310, 77);
+			this.btnLimpar.Name = "btnLimpar";
+			this.btnLimpar.Size = new System.Drawing.Size(92, 34);
+			this.btnLimpar.TabIndex = 24;
+			this.btnLimpar.Text = "Limpar";
+			this.btnLimpar.UseVisualStyleBackColor = false;
+			this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.label5.Location = new System.Drawing.Point(246, 15);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(22, 17);
+			this.label5.TabIndex = 23;
+			this.label5.Text = "ID";
+			this.label5.Click += new System.EventHandler(this.label5_Click);
+			// 
+			// txtId
+			// 
+			this.txtId.Location = new System.Drawing.Point(225, 35);
+			this.txtId.Name = "txtId";
+			this.txtId.Size = new System.Drawing.Size(100, 23);
+			this.txtId.TabIndex = 22;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.SystemColors.Window;
+			this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.button1.Location = new System.Drawing.Point(428, 77);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(92, 34);
+			this.button1.TabIndex = 21;
+			this.button1.Text = "Salvar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label9
 			// 
@@ -153,34 +198,11 @@ namespace Crud
 			this.txtUni.Size = new System.Drawing.Size(100, 23);
 			this.txtUni.TabIndex = 13;
 			// 
-			// btnCadastrar
-			// 
-			this.btnCadastrar.BackColor = System.Drawing.SystemColors.Window;
-			this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnCadastrar.Location = new System.Drawing.Point(397, 77);
-			this.btnCadastrar.Name = "btnCadastrar";
-			this.btnCadastrar.Size = new System.Drawing.Size(92, 34);
-			this.btnCadastrar.TabIndex = 6;
-			this.btnCadastrar.Text = "Cadastrar";
-			this.btnCadastrar.UseVisualStyleBackColor = false;
-			this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-			// 
-			// btnAlterar
-			// 
-			this.btnAlterar.BackColor = System.Drawing.SystemColors.Window;
-			this.btnAlterar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnAlterar.Location = new System.Drawing.Point(162, 77);
-			this.btnAlterar.Name = "btnAlterar";
-			this.btnAlterar.Size = new System.Drawing.Size(92, 34);
-			this.btnAlterar.TabIndex = 7;
-			this.btnAlterar.Text = "Alterar";
-			this.btnAlterar.UseVisualStyleBackColor = false;
-			// 
 			// btnExcluir
 			// 
 			this.btnExcluir.BackColor = System.Drawing.SystemColors.Window;
 			this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.btnExcluir.Location = new System.Drawing.Point(280, 77);
+			this.btnExcluir.Location = new System.Drawing.Point(203, 77);
 			this.btnExcluir.Name = "btnExcluir";
 			this.btnExcluir.Size = new System.Drawing.Size(92, 34);
 			this.btnExcluir.TabIndex = 8;
@@ -249,18 +271,6 @@ namespace Crud
 			this.label2.TabIndex = 5;
 			this.label2.Text = "Nome do cliente";
 			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.SystemColors.Window;
-			this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.button1.Location = new System.Drawing.Point(505, 77);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(92, 34);
-			this.button1.TabIndex = 21;
-			this.button1.Text = "Salvar";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
 			// TelaCrud
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -302,10 +312,11 @@ namespace Crud
         private System.Windows.Forms.TextBox txtUni;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnExcluir;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox txtId;
+		private System.Windows.Forms.Button btnLimpar;
 	}
 }
 
